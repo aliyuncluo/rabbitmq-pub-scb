@@ -22,10 +22,10 @@ public class ExchangeConfig {
      *   key: queue在该direct-exchange中的key值，当消息发送给direct-exchange中指定key为设置值时，
      *   消息将会转发给queue参数指定的消息队列
      */
-    @Bean
-    public DirectExchange directExchange(){
-        DirectExchange exchange = new DirectExchange(ExchangeConfig.EXCHANGE,true,false);
-        return exchange;
+    //定义类型为fanout的消息交换机
+	@Bean
+    public FanoutExchange fanoutExchange(){
+        FanoutExchange exchange = new FanoutExchange(ExchangeConfig.EXCHANGE,true,false);
     }
 
 }

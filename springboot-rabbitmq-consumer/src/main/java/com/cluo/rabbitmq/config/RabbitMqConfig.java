@@ -41,7 +41,7 @@ public class RabbitMqConfig {
 
         @Bean
         public Binding bindingExchange() {
-            return BindingBuilder.bind(queueConfig.firstQueue()).to(exchangeConfig.directExchange()).with("");
+            return BindingBuilder.bind(queueConfig.firstQueue()).to(exchangeConfig.fanoutExchange()).with("");
         }
 
 
